@@ -17,19 +17,21 @@ import MyListView from './components/MyListView'
 class RNPlayground extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <MyListView />
+      <View style={styles.parent}>
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
+  parent: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    flexDirection: 'column',
+    backgroundColor: 'blue',
+    top: 30,
+    left: 0,
+    right: 0,
+    bottom: 0
   }
 });
 

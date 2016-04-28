@@ -17,15 +17,18 @@ class RNPlayground extends Component {
     }
   }
 
-  renderRow(rowData) {
-    <Text style={styles.listContent}>{rowData}</Text>
+  _renderRow(rowData) {
+    return (
+      <Text style={styles.listContent}>{rowData}</Text>
+    )
   }
 
   render() {
     return (
       <ListView
         dataSource={this.state.dataSource}
-        renderRow={this.renderRow()}
+        renderRow={this._renderRow}
+        style={styles.list}
       />
     )
   }
